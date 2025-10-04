@@ -1,0 +1,43 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings
+    "module": "nodenext",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "types": ["node", "express", "mongoose", "cors"], 
+    
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  
+  // 🎯 FIX: 'include' is a top-level property, NOT inside compilerOptions
+  "include": [
+    "src/**/*.ts", // Includes all .ts files
+    "src/**/*.mts"  // Explicitly includes all .mts files
+  ],
+  // You may also want to explicitly define 'exclude' here as a sibling to 'include'
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
